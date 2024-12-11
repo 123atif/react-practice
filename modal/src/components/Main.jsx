@@ -10,7 +10,7 @@ const Main = () => {
         MODAL IN REACT
       </h1>
 
-      <div className="flex justify-center mt-10 bg-orange-400 w-[100px] mx-auto border-zinc-100 rounded-lg hover:bg-orange-600">
+      <div className="flex justify-center mt-10 bg-orange-300 w-[100px] mx-auto border-zinc-100 rounded-lg hover:bg-orange-600">
         <button
           className="p-2 text-white font-bold"
           onClick={() => setOpen(true)}
