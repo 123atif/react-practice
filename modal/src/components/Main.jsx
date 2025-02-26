@@ -12,7 +12,7 @@ const Main = () => {
 
       <div className="flex justify-center mt-10 bg-orange-300 w-[100px] mx-auto border-zinc-100 rounded-lg hover:bg-orange-600">
         <button
-          className="p-2 text-white font-bold"
+          className="p-2 text-white font-bold "
           onClick={() => setOpen(true)}
         >
           Click Me

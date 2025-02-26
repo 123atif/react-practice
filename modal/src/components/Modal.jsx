@@ -4,8 +4,8 @@ import { TbXboxXFilled } from "react-icons/tb";
 const Modal = ({ setOpen }) => {
   return (
     <>
-      <div className="z-40 h-full w-full backdrop-blur-sm fixed top-0 left-0 flex items-center justify-center">
-        <div className="w-1/2 h-1/2 p-4 shadow-2xl rounded-md bg-white z-50">
+      <div className="z-40 h-full w-full backdrop-blur-sm fixed top-0 left-0 flex items-center justify-center ">
+        <div className="w-1/2 h-1/2 p-4 shadow-2xl rounded-md bg-white z-50 ">
           <div className="cursor-pointer">
             <TbXboxXFilled
               onClick={() => setOpen(false)}
