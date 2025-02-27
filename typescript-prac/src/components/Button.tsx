@@ -23,11 +23,18 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, className }) => {
   const [count, setCount] = useState<number>(0)
+  const [value, setValue] = useState<string>("")
 
+  const handlenameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+    console.log(value)
+  }
   return (
     <>
     <h1>{count}</h1>
     <button onClick={() => setCount(count + 1)} className={`btn ${className}`}>{text}</button>
+    <input type="search" onChange={handlenameChange}/>
+    <h1>{value}</h1>
     </>
   )
 }
