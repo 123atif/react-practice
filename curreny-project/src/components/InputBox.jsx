@@ -36,7 +36,11 @@ const InputBox = ({
             onCurrencyChange && onCurrencyChange(Number(e.target.value));
           }}
         >
-          <option value="usd">{currencyOption}</option>
+          {currencyOption?.map((value, index) => (
+            <option value={value} key={index}>
+              {value}
+            </option>
+          ))}
         </select>
       </div>
     </div>
