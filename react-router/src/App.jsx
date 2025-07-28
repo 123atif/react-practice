@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="bg-blue-500">React router</div>
+      <div className="bg-blue-500">React sd router</div>
     </>
   );
 }
