@@ -1,7 +1,12 @@
+import Footer from "./components/footer/Footer";
+import Header from "./components/headers/Header";
+
 function App() {
   return (
     <>
-      <div className="bg-blue-500">React sd router</div>
+      <Header />
+
+      <Footer />
     </>
   );
 }
