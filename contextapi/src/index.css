@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+  background-color: #9e9b9b;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial", sans-serif;
+}
+p {
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
