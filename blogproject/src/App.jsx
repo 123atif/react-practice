@@ -1,23 +1,49 @@
+import { useEffect, useState } from 'react';
 import './index.css'
-// import { Editor } from '@tinymce/tinymce-react';
+import { useDispatch } from "react-redux"
+import authService from './appwrite/auth';
+import { login, logout } from './store/slices/authSlice';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 function App() {
-  const value = import.meta.env.VITE_API_URL
-  console.log(value)
+
+
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
+  // console.log(dispatch);
+
+
+  useEffect(() => {
+    authService.getCurrentUser()
+      .then((userData) => {
+        if (userData) {
+          dispatch(login({ userData }))
+        }
+        else {
+          dispatch(logout())
+        }
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+
+  }, [dispatch]);
 
   return (
 
-    <>
-      {/* <div className="w-fit m-auto">
-        <Editor
-          apiKey='wgv8vldb5r0qzhxyqwi330hzjb4efc18jwovfoax5rx9e7ry'
-          init={{
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-          }}
-          initialValue="Welcome to TinyMCE!"
-        />
-      </div> */}
-    </>
+    <div>
+
+      {!loading ? (<div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+        <div className='w-full block'>
+          <Header />
+          <main>
+            Appwrite  {/* <Outlet /> */}
+          </main>
+          <Footer />
+        </div>
+      </div>) : (null)}
+
+    </div>
   )
 }
 
