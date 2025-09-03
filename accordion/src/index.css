@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.border {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.title-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
